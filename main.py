@@ -12,7 +12,9 @@ while True:
         nome_produto = input("Nome do produto: ")
         valor_unitario = float(input("Valor unitário: "))
         quantidade = int(input("Quantidade: "))
-        print()
         
+        valor_bruto = valor_unitario * quantidade
+        print(f"\nValor bruto da venda: R$ {valor_bruto:.2f}\n")
+    
     elif opcao == '3':
         break
