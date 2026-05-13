@@ -12,4 +12,15 @@ python main.py
 
 git init
 git add .
-git commit -m "first commit"
+git commit -m "V0.0.0"
+git add .
+git commit -m "V0.0.1"
+git add .
+git commit -m "V0.0.2"
+git add .
+git commit -m "V0.0.3"
+
+git push -u origin main
+git push
+
+
