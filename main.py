@@ -1,3 +1,8 @@
+total_vendas_realizadas = 0
+total_bruto_vendido = 0
+total_descontos_concedidos = 0
+total_liquido_vendido = 0
+
 while True:
     print("=== SISTEMA DE VENDAS ===")
     print("")
@@ -14,7 +19,37 @@ while True:
         quantidade = int(input("Quantidade: "))
         
         valor_bruto = valor_unitario * quantidade
-        print(f"\nValor bruto da venda: R$ {valor_bruto:.2f}\n")
+        
+        if valor_bruto < 100:
+            taxa_desconto = 0
+        elif valor_bruto < 500:
+            taxa_desconto = 5
+        elif valor_bruto < 1000:
+            taxa_desconto = 10
+        else:
+            taxa_desconto = 15
+            
+        valor_desconto = valor_bruto * (taxa_desconto / 100)
+        valor_final = valor_bruto - valor_desconto
+        
+        total_vendas_realizadas += 1
+        total_bruto_vendido += valor_bruto
+        total_descontos_concedidos += valor_desconto
+        total_liquido_vendido += valor_final
+
+        print(f"\nValor bruto da venda: R$ {valor_bruto:.2f}")
+        print(f"Desconto aplicado: {taxa_desconto}%")
+        print(f"Valor do desconto: R$ {valor_desconto:.2f}")
+        print(f"Valor final da venda: R$ {valor_final:.2f}\n")
+    
+    elif opcao == '2':
+        print(f"Total de vendas realizadas: {total_vendas_realizadas}")
+        print(f"Total bruto vendido: R$ {total_bruto_vendido:.2f}")
+        print(f"Total de descontos concedidos: R$ {total_descontos_concedidos:.2f}")
+        print(f"Total líquido vendido: R$ {total_liquido_vendido:.2f}\n")
     
     elif opcao == '3':
+        print("Encerrando o sistema...")
         break
+    else:
+        print("Opção inválida! Tente novamente.\n")
