@@ -8,5 +8,11 @@ while True:
     opcao = input("Escolha uma opção: ")
     print()
 
-    if opcao == '3':
+    if opcao == '1':
+        nome_produto = input("Nome do produto: ")
+        valor_unitario = float(input("Valor unitário: "))
+        quantidade = int(input("Quantidade: "))
+        print()
+        
+    elif opcao == '3':
         break
