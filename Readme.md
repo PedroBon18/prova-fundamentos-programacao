@@ -1,6 +1,15 @@
-# Prova de Fundamentos de Programação
-Olá Mundo|
-Hello World|
-ハローセカイ|
-Hola Mundo|
-Bonjour le monde
+# Prova Prática - Fundamentos de Programação
+
+Nome do aluno: Pedro Rufino Bon
+
+Descrição:
+Sistema simples para registro de vendas de uma loja.
+
+Como executar:
+python main.py
+
+# Lista de comandos no git executados
+
+git init
+git add .
+git commit -m "first commit"
