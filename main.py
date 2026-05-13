@@ -53,7 +53,14 @@ while True:
             print(f"Total líquido vendido: R$ {total_liquido_vendido:.2f}\n")
     
     elif opcao == '3':
-        print("Encerrando o sistema...")
+        print("=== RESUMO FINAL ===\n")
+        print("")
+        print(f"Total de vendas realizadas: {total_vendas_realizadas}")
+        print(f"Total bruto vendido: R$ {total_bruto_vendido:.2f}")
+        print(f"Total de descontos concedidos: R$ {total_descontos_concedidos:.2f}")
+        print(f"Total líquido vendido: R$ {total_liquido_vendido:.2f}\n")
+        print("")
+        print("Sistema encerrado.")
         break
     else:
         print("Opção inválida! Tente novamente.\n")
